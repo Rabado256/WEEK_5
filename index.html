@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent Task Manager | Averon Academy Week 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Averon Task Manager</h1>
+            <p class="subtitle">Week 5: Arrays, Objects & LocalStorage Persistence</p>
+        </header>
+
+        <!-- Task Input Section -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="What needs to be done?" autocomplete="off">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+
+        <!-- Filter Navigation Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- Task List Container -->
+        <ul id="taskList" class="task-list">
+            <!-- Dynamically rendered tasks go here -->
+        </ul>
+
+        <!-- Empty State Notice -->
+        <div id="emptyState" class="empty-state hidden">
+            <p>🎉 No tasks found in this view. Enjoy your free time!</p>
+        </div>
+
+        <!-- Footer / Counter Information -->
+        <footer class="app-footer">
+            <p><span id="taskCounter">0</span> tasks remaining</p>
+            <button id="clearCompletedBtn" class="clear-btn">Clear Completed</button>
+        </footer>
+    </main>
+
+    <!-- JavaScript loaded with defer -->
+    <script src="script.js" defer></script>
+</body>
+</html>
